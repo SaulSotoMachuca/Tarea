@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Datos - Educación</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        tr.space-row > td {
+            padding-top: 20px; 
+            background: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Diccionario de Datos - Educación</h2>
+
+<table>
+  <tr>
+    <th>Entidad</th>
+    <th>Campo</th>
+    <th>Descripción</th>
+    <th>Tipo de Dato</th>
+    <th>Longitud de Caracter</th>
+    <th>Requerido</th>
+    <th>Acepta Valores Nulos</th>
+  </tr>
+  <!-- Tabla: Estudiantes -->
+  <tr>
+    <td>Estudiantes</td>
+    <td>id</td>
+    <td>Identificador único del estudiante</td>
+    <td>INT</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Estudiantes</td>
+    <td>nombre</td>
+    <td>Nombre del estudiante</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Estudiantes</td>
+    <td>apellido</td>
+    <td>Apellido del estudiante</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Estudiantes</td>
+    <td>ciudad_nacimiento</td>
+    <td>Ciudad de nacimiento del estudiante</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Estudiantes</td>
+    <td>fecha_nacimiento</td>
+    <td>Fecha de nacimiento del estudiante</td>
+    <td>DATE</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Estudiantes</td>
+    <td>grado</td>
+    <td>Grado del estudiante</td>
+    <td>INT</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+
+  <tr class="space-row">
+    <td colspan="6"></td>
+  </tr>
+
+  <!-- Tabla: Profesores -->
+
+  <tr>
+    <td>Profesores</td>
+    <td>id</td>
+    <td>Identificador único del profesor</td>
+    <td>INT</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Profesores</td>
+    <td>nombre</td>
+    <td>Nombre del profesor</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Profesores</td>
+    <td>apellido</td>
+    <td>Apellido del profesor</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Profesores</td>
+    <td>especialidad</td>
+    <td>Especialidad del profesor</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Profesores</td>
+    <td>telefono</td>
+    <td>Teléfono del profesor</td>
+    <td>VARCHAR</td>
+    <td>15</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+
+  <tr class="space-row">
+    <td colspan="6"></td>
+  </tr>
+
+  <!-- Tabla: Asignaturas -->
+
+  <tr>
+    <td>Asignaturas</td>
+    <td>id</td>
+    <td>Identificador único de la asignatura</td>
+    <td>INT</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Asignaturas</td>
+    <td>nombre</td>
+    <td>Nombre de la asignatura</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Asignaturas</td>
+    <td>descripcion</td>
+    <td>Descripción de la asignatura</td>
+    <td>VARCHAR</td>
+    <td>100</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Asignaturas</td>
+    <td>creditos</td>
+    <td>Número de créditos de la asignatura</td>
+    <td>INT</td>
+    <td>N/A</td>
+    <td>Sí</td>
+    <td>No</td>
+  </tr>
+
+</table>
+
+<hr>
+
+<table>
+    <tr>
+      <th>Entidad Padre</th>
+      <th>Entidad Hija</th>
+      <th>Tipo de Relación</th>
+    </tr>
+    <!-- Relación: Estudiantes - Profesores -->
+    <tr>
+      <td>Estudiantes</td>
+      <td>Profesores</td>
+      <td>Uno a Varios</td>
+    </tr>
+    <!-- Relación: Estudiantes - Asignaturas -->
+   
